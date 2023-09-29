@@ -4,6 +4,7 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import whyUsListData from "./whyUsListData";
 import { Button } from "@/components";
+import Typography from "@/components/Typography";
 
 const WhyUsSection = () => {
   return (
@@ -73,8 +74,10 @@ const WhyUsCardItem = (props: {
         alt={props.imageAlt}
         className="w-full aspect-video object-cover rounded-lg"
       />
-      <h3 className="h3 mt-8">{props.title}</h3>
-      <p className="mt-4">{props.description}</p>
+      <Typography variant="h4" className="mt-8">
+        {props.title}
+      </Typography>
+      <Typography className="mt-3">{props.description}</Typography>
       <Link
         href={props.learnMorePath}
         className="relative block mt-8 link-action"

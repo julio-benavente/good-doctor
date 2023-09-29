@@ -29,7 +29,7 @@ module.exports = {
         hello: ["var(--font-hello)"],
       },
       animation: {
-        linkunderline: "linkunderline 300ms ease-in-out",
+        linkunderline: "linkunderline 300ms ease-in-out both",
       },
       keyframes: {
         linkunderline: {
@@ -139,24 +139,47 @@ module.exports = {
     "prettier-plugin-tailwindcss",
     ({ addBase }) => {
       addBase({
-        ".border-base": {
-          [`@apply ${cn("border-2 border-base-border-color")} !important`]: {},
+        ".link": {
+          [`@apply ${cn(
+            "text-green-800 font-bold hover:text-gray-700 hover:underline"
+          )} !important`]: {},
         },
-        ".border-base-t": {
-          [`@apply ${cn("border-base-border-color border-t-2")} !important`]:
-            {},
+        ".link-light": {
+          [`@apply ${cn(
+            "text-white font-bold hover:text-white/80 hover:underline"
+          )} !important`]: {},
         },
-        ".border-base-r": {
-          [`@apply ${cn("border-base-border-color border-r-2")} !important`]:
-            {},
+        ".link-action": {
+          [`@apply ${cn(
+            "relative text-green-800 font-bold transition-all duration-300 ease-out max-w-fit h-fit",
+            "hover:text-gray-700 hover:after:bg-gray-700",
+            "after:w-full after:h-0.5 after:bg-green-800 after:absolute after:left-0 after:-bottom-0.5"
+          )} !important`]: {},
         },
-        ".border-base-b": {
-          [`@apply ${cn("border-base-border-color border-b-2")} !important`]:
-            {},
+        ".link-action-light": {
+          [`@apply ${cn(
+            "relative text-white font-bold transition-all duration-300 ease-out max-w-fit h-fit",
+            "hover:text-gray-300 hover:after:bg-gray-300",
+            "after:w-full after:h-0.5 after:bg-white after:absolute after:left-0 after:-bottom-0.5"
+          )} !important`]: {},
         },
-        ".border-base-l": {
-          [`@apply ${cn("border-base-border-color border-l-2")} !important`]:
-            {},
+        ".h1": {
+          [`@apply ${cn("text-5xl")} !important`]: {},
+        },
+        ".h2": {
+          [`@apply ${cn("text-3xl font-semibold")} !important`]: {},
+        },
+        ".h3": {
+          [`@apply ${cn("text-2xl font-semibold")} !important`]: {},
+        },
+        ".h4": {
+          [`@apply ${cn("text-xl font-semibold")} !important`]: {},
+        },
+        ".h5": {
+          [`@apply ${cn("text-lg font-semibold")} !important`]: {},
+        },
+        ".h6": {
+          [`@apply ${cn("text-lg font-semibold")} !important`]: {},
         },
       });
     },

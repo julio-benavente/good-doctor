@@ -28,7 +28,7 @@ const Navbar = () => {
     <header className="bg-teal-50">
       <div
         className={cn(
-          "container mx-auto grid grid-cols-[auto_1fr_auto] h-16 items-center"
+          "px-12 mx-auto grid grid-cols-[auto_1fr_auto] h-16 items-center"
         )}
         data-color-theme="dark"
       >
@@ -50,9 +50,9 @@ const Navbar = () => {
           <Button color="secondary" href="tel:8888986762">
             (888) 898-6762
           </Button>
-          <Button color="warning">
-            <Link href="/">Request Appointment</Link>
-          </Button>
+          <Link href="/" passHref>
+            <Button color="appointment">Request Appointment</Button>
+          </Link>
         </div>
       </div>
       {megaMenuData && <MegaMenu {...megaMenuData} />}

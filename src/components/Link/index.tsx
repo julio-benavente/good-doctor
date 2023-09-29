@@ -1,0 +1,36 @@
+import React from "react";
+import MuiLink, { LinkProps as MuiLinkProps } from "@mui/material/Link";
+import NextLink from "next/link";
+import cn from "@/helpers/cn";
+
+interface LinkProps extends MuiLinkProps {
+  external?: boolean;
+  type?: "standard" | "action" | "menu";
+}
+
+const Link = ({
+  external = false,
+  type = "standard",
+  href,
+  ...props
+}: LinkProps) => {
+  return (
+    <NextLink href={String(href)} passHref>
+      <MuiLink
+        className={cn(
+          "text-green-800 font-bold hover:text-text-headline no-underline relative max-w-fit h-fit",
+          type === "standard" && "hover:underline",
+          type === "action" && [
+            "hover:after:bg-gray-700",
+            "after:w-full after:h-0.5 after:bg-primary after:absolute after:left-0 after:-bottom-0.5 after:hover:w-0",
+            "before:h-0.5 before:bg-primary before:absolute before:left-0 before:-bottom-0.5 before:hover:animate-linkunderline before:hover:bg-text-headline",
+          ]
+        )}
+      >
+        {props.children}
+      </MuiLink>
+    </NextLink>
+  );
+};
+
+export default Link;
