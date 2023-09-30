@@ -1,4 +1,6 @@
 import "./globals.css";
+import Navbar from "@/app/home/Navbar";
+import FooterSection from "@/app/home/FooterSection";
 import type { Metadata } from "next";
 import { cabinet } from "@/helpers/fonts";
 
@@ -14,7 +16,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${cabinet.variable}`}>{children}</body>
+      <body className={`${cabinet.variable}`}>
+        <Navbar />
+
+        {children}
+
+        <FooterSection />
+      </body>
     </html>
   );
 }

@@ -95,8 +95,9 @@ export const MegaMenu = (props) => {
             <SectionTitle>{props.sectionThree.title}</SectionTitle>
             <ul className="grid grid-flow-row gap-2">
               {props.sectionThree.data.map((e, i) => {
+                console.log(e.label);
                 return (
-                  <li key={i}>
+                  <li key={e.label}>
                     <Link className="link" href={e.path}>
                       {e.label}
                     </Link>

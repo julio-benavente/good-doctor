@@ -1,20 +1,17 @@
 "use client";
 
-import Navbar from "./homePage/Navbar";
-import HeroSection from "./homePage/HeroSection";
-import SearchSection from "./homePage/SearchSection";
-import WhyUsSection from "./homePage/WhyUsSection";
-import ProcessSection from "./homePage/ProcessSection";
-import AssociatesSection from "./homePage/AssociatesSection";
-import TestimonialsSection from "./homePage/TestimonialsSection";
-import FAQSection from "./homePage/FAQSection";
-import RecentArticlesSection from "./homePage/RecentArticlesSection";
-import FooterSection from "./homePage/FooterSection";
+import HeroSection from "./home/HeroSection";
+import SearchSection from "./home/SearchSection";
+import WhyUsSection from "./home/WhyUsSection";
+import ProcessSection from "./home/ProcessSection";
+import AssociatesSection from "./home/AssociatesSection";
+import TestimonialsSection from "./home/TestimonialsSection";
+import FAQSection from "./home/FAQSection";
+import RecentArticlesSection from "./home/RecentArticlesSection";
 
 const page = () => {
   return (
     <div className="">
-      <Navbar />
       <HeroSection />
       <SearchSection />
       <WhyUsSection />
@@ -23,7 +20,6 @@ const page = () => {
       <TestimonialsSection />
       <FAQSection />
       <RecentArticlesSection />
-      <FooterSection />
     </div>
   );
 };

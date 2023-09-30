@@ -53,7 +53,7 @@ const RecentArticleCard = () => {
           {taxonamis.map((e, i, a) => {
             const addComma = i < a.length - 1;
             return (
-              <Link href="/" className="link text-base">
+              <Link href="/" className="link text-base" key={i}>
                 {e}
                 {`${addComma && ", "}`}
               </Link>
