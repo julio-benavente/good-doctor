@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import TestimonialsSlider from "./";
 
 const meta: Meta<typeof TestimonialsSlider> = {
-  title: "Components/Testimonials slider",
+  title: "Sections/Testimonials slider",
   component: TestimonialsSlider,
   parameters: {
     layout: "fullscreen",

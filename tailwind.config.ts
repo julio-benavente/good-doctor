@@ -186,7 +186,8 @@ module.exports = {
           [`@apply ${cn("ring-4 ring-primary/50")} !important`]: {},
         },
         ".container": {
-          [`@apply ${cn("mx-auto px-20 max-w-[1440px]")} !important`]: {},
+          [`@apply ${cn("mx-auto p-6 max-w-[1440px]", "lg:px-20")} !important`]:
+            {},
         },
       });
     },

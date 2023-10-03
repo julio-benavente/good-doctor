@@ -1,4 +1,4 @@
-import { TestimonialsSlider } from "@/components";
+import { BlogsSection, TestimonialsSlider } from "@/components";
 import FormSection from "./FormSection";
 import CharacteristicsSection from "./CharacteristicsSection";
 
@@ -8,6 +8,7 @@ const RequestAnAppointment = () => {
       <FormSection />
       <CharacteristicsSection />
       <TestimonialsSlider theme="secondary" />
+      <BlogsSection />
     </>
   );
 };
