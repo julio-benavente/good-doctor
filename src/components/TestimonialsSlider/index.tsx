@@ -1,8 +1,6 @@
 "use client";
-import React, { ClassAttributes, useEffect, useRef, useState } from "react";
-import Rating from "@mui/material/Rating";
+import { useRef, useState } from "react";
 import cn from "@/helpers/cn";
-import { Button } from "@/components";
 import Slider, { Settings } from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -11,8 +9,9 @@ import { IconButton } from "@/components";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
-interface TestimonialsSliderProps {
-  theme?: "light" | "neutral";
+export type TestimonialsThemeType = "light" | "neutral" | "secondary";
+export interface TestimonialsSliderProps {
+  theme?: TestimonialsThemeType;
 }
 
 const TestimonialsSlider = ({
@@ -66,7 +65,8 @@ const TestimonialsSlider = ({
       className={cn(
         "py-24 overflow-hidden",
         theme === "neutral" && "bg-terciary",
-        theme === "light" && "bg-white"
+        theme === "light" && "bg-white",
+        theme === "secondary" && "bg-white"
       )}
     >
       <div className="container mx-auto">
@@ -88,7 +88,7 @@ const TestimonialsSlider = ({
             onReInit={onReInit}
           >
             {testimonialsListData.map((item, i) => {
-              return <TestimonialCardItem key={i} {...item} />;
+              return <TestimonialCardItem key={i} theme={theme} {...item} />;
             })}
           </Slider>
         </div>

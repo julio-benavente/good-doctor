@@ -2,10 +2,16 @@ import React from "react";
 import MuiTypography, { TypographyProps } from "@mui/material/Typography";
 import cn from "@/helpers/cn";
 
-const Typography = ({ variant = "body1", ...props }: TypographyProps) => {
+const Typography = ({
+  className,
+  classes,
+  variant = "body1",
+  ...props
+}: TypographyProps) => {
   return (
     <MuiTypography
       variant={variant}
+      className={cn(className)}
       classes={{
         root: cn("font-cabinet font-cabinet"),
         h1: cn("text-5xl font-cabinet text-text-headline"),
@@ -14,8 +20,10 @@ const Typography = ({ variant = "body1", ...props }: TypographyProps) => {
         h4: cn("text-xl font-bold text-text-headline"),
         h5: cn("text-lg font-bold text-text-headline"),
         body1: cn("text-lg text-text"),
-        body2: cn("text-sm text-text"),
+        body2: cn("text-base text-text"),
         subtitle1: cn("text-lg text-text"),
+        caption: cn("text-sm leading-snug"),
+        ...classes,
       }}
       {...props}
     >

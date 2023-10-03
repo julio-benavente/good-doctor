@@ -8,6 +8,7 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/views/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/helpers/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
 
@@ -180,6 +181,12 @@ module.exports = {
         },
         ".h6": {
           [`@apply ${cn("text-lg font-semibold")} !important`]: {},
+        },
+        ".ring-input": {
+          [`@apply ${cn("ring-4 ring-primary/50")} !important`]: {},
+        },
+        ".container": {
+          [`@apply ${cn("mx-auto px-20 max-w-[1440px]")} !important`]: {},
         },
       });
     },

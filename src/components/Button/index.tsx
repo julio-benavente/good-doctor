@@ -1,11 +1,5 @@
 "use client";
-import React from "react";
-import MuiButton, {
-  ButtonProps,
-  ButtonPropsColorOverrides,
-  ButtonPropsVariantOverrides,
-  ExtendButton,
-} from "@mui/material/Button";
+import MuiButton, { ButtonProps } from "@mui/material/Button";
 import cn from "@/helpers/cn";
 // import { createTheme, ThemeProvider } from "@mui/material";
 import {
@@ -13,8 +7,6 @@ import {
   ThemeProvider,
   createTheme,
 } from "@mui/material/styles";
-import { blue, red } from "@mui/material/colors";
-import { colors } from "@mui/material";
 
 declare module "@mui/material/Button" {
   interface ButtonPropsColorOverrides {

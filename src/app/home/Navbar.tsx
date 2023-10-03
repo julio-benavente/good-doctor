@@ -37,12 +37,18 @@ const Navbar = () => {
         </div>
 
         <div className="justify-self-center grid grid-flow-col gap-x-6">
-          {navbarData.map((e) => {
+          {navbarData.map((e, i) => {
             if (e.isMegaMenu) {
-              return <MegaNavbarLink {...e} handleMegaMenu={handleMegaMenu} />;
+              return (
+                <MegaNavbarLink
+                  key={e.label}
+                  {...e}
+                  handleMegaMenu={handleMegaMenu}
+                />
+              );
+            } else {
+              return <RegularNavbarLink key={e.label} {...e} />;
             }
-
-            return <RegularNavbarLink {...e} />;
           })}
         </div>
 

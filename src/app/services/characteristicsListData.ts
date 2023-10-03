@@ -1,7 +1,6 @@
 import ImageThree from "@/../public/assets/doctor-greeting.jpg";
 import ImageOne from "@/../public/assets/hero-image.jpg";
 import ImageTwo from "@/../public/assets/doctor-listening.jpg";
-import Image, { StaticImageData } from "next/image";
 import { CharacteristicItemProps } from "./CharacteristicItem";
 
 const characteristicsListData: CharacteristicItemProps[] = [

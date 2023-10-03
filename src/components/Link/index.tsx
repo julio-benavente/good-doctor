@@ -6,16 +6,18 @@ import cn from "@/helpers/cn";
 interface LinkProps extends MuiLinkProps {
   external?: boolean;
   type?: "standard" | "action" | "menu";
+  target?: React.HTMLAttributeAnchorTarget;
 }
 
 const Link = ({
   external = false,
   type = "standard",
+  target,
   href,
   ...props
 }: LinkProps) => {
   return (
-    <NextLink href={String(href)} passHref>
+    <NextLink href={String(href)} passHref target={target}>
       <MuiLink
         className={cn(
           "text-green-800 font-bold hover:text-text-headline no-underline relative max-w-fit h-fit",
@@ -26,6 +28,8 @@ const Link = ({
             "before:h-0.5 before:bg-primary before:absolute before:left-0 before:-bottom-0.5 before:hover:animate-linkunderline before:hover:bg-text-headline",
           ]
         )}
+        component="span"
+        {...props}
       >
         {props.children}
       </MuiLink>

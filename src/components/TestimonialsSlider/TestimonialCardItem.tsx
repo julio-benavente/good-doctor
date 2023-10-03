@@ -1,13 +1,21 @@
 import { Rating } from "@mui/material";
+import { TestimonialsThemeType } from ".";
+import cn from "@/helpers/cn";
 
 interface TestimonialCardItemProps {
+  theme?: TestimonialsThemeType;
   name: string;
   origin: string;
   comment: string;
 }
-const TestimonialCardItem = ({ ...props }: TestimonialCardItemProps) => {
+const TestimonialCardItem = ({ theme, ...props }: TestimonialCardItemProps) => {
   return (
-    <div className="w-80 mr-8 p-6 bg-white flex flex-col rounded-lg h-full">
+    <div
+      className={cn(
+        "w-80 mr-8 p-6 bg-white flex flex-col rounded-lg h-full",
+        theme === "secondary" && "bg-terciary"
+      )}
+    >
       <Rating defaultValue={5} readOnly />
       {/* <h3 className="h4 mt-2 link">
         <span>Morgana Park</span>
