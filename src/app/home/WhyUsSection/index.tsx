@@ -13,7 +13,7 @@ const WhyUsSection = () => {
       <div className="container mx-auto">
         <h2 className="h1 max-w-sm">Why choose Oak Street Health?</h2>
         <WhyUsList />
-        <CharacteristicBanner />
+        <CharacteristicBanner className="mt-12 lg:mt-24" />
       </div>
     </section>
   );

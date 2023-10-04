@@ -188,8 +188,8 @@ module.exports = {
         },
         ".container": {
           [`@apply ${cn(
-            "mx-auto p-6 max-w-[96rem]",
-            "md:p-12",
+            "mx-auto px-5 py-12 max-w-[96rem]",
+            "md:px-12 md:py-16",
             "lg:p-16",
             "xl:p-20"
           )} !important`]: {},
