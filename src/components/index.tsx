@@ -11,3 +11,5 @@ export { default as TextField } from "./TextField";
 export { default as Checkbox } from "./Checkbox";
 export { default as TwentyFourSeven } from "./TwentyFourSeven";
 export { default as BlogsSection } from "./BlogsSection";
+export { default as InputWrapper } from "./InputWrapper";
+export { default as TextArea } from "./TextArea";

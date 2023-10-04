@@ -43,7 +43,7 @@ const Button = ({
         color="primary"
         disableRipple
         className={cn(
-          "relative after:hidden hover:after:block after:w-full after:h-full  after:absolute after:left-0 after:top-0",
+          "relative w-fit after:hidden hover:after:block after:w-full after:h-full  after:absolute after:left-0 after:top-0",
           className,
           props.color === "appointment" &&
             variant === "contained" &&
@@ -58,7 +58,7 @@ const Button = ({
             "text-text-light bg-primary hover:bg-primary/90 focus:ring-4 focus:ring-primary/50"
           ),
           containedSecondary: cn(
-            "bg-secondary text-text hover:bg-secondary/70 active:bg-secondary/50 focus:ring-4 focus:ring-secondary/50"
+            "bg-emerald-200 text-text hover:bg-emerald-200/70 active:bg-emerald-200/50 focus:ring-4 focus:ring-input active:ring-0"
           ),
           sizeSmall: cn("px-2 py-2"),
           sizeMedium: cn("px-4 py-3"),

@@ -61,7 +61,8 @@ module.exports = {
           DEFAULT: "#00694c",
         },
         secondary: {
-          DEFAULT: "#a0ebc8",
+          DEFAULT: "#d1f2e3",
+          texture: "#a0ebc8",
         },
         terciary: {
           DEFAULT: "#eff5f6",
@@ -186,8 +187,12 @@ module.exports = {
           [`@apply ${cn("ring-4 ring-primary/50")} !important`]: {},
         },
         ".container": {
-          [`@apply ${cn("mx-auto p-6 max-w-[1440px]", "lg:px-20")} !important`]:
-            {},
+          [`@apply ${cn(
+            "mx-auto p-6 max-w-[96rem]",
+            "md:p-12",
+            "lg:p-16",
+            "xl:p-20"
+          )} !important`]: {},
         },
       });
     },

@@ -33,8 +33,8 @@ const TextField = ({
     <MuiTextField
       InputProps={{
         classes: {
-          root: cn("group bg-white"),
-          input: cn("h-12 py-2 box-border"),
+          root: cn("group bg-white p-0"),
+          input: cn("py-2 px-4 box-border h-auto"),
           focused: cn("border-emerald-300/80"),
           notchedOutline: cn(
             "border-2 border-emerald-300",
@@ -45,6 +45,8 @@ const TextField = ({
           ...classes,
         },
       }}
+      multiline
+      rows={4}
       {...props}
       {...register(name, { ...registerOptions })}
     />
