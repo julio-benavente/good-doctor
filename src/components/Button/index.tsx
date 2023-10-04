@@ -60,9 +60,9 @@ const Button = ({
           containedSecondary: cn(
             "bg-emerald-200 text-text hover:bg-emerald-200/70 active:bg-emerald-200/50 focus:ring-4 focus:ring-input active:ring-0"
           ),
-          sizeSmall: cn("px-2 py-2"),
-          sizeMedium: cn("px-4 py-3"),
-          sizeLarge: cn("px-6 py-3"),
+          sizeSmall: cn("px-3 py-2"),
+          sizeMedium: cn("px-5 py-3"),
+          sizeLarge: cn("px-8 py-3"),
           disabled: cn("bg-gray-100 text-text-disabled"),
         }}
         {...props}

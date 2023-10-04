@@ -1,5 +1,5 @@
 import cn from "@/helpers/cn";
-import { Button } from "@/components";
+import { Button, Typography } from "@/components";
 import TextField from "@mui/material/TextField";
 
 import InputAdornment from "@mui/material/InputAdornment";
@@ -17,18 +17,35 @@ const SearchSection = () => {
   });
 
   return (
-    <section className="-mt-24  relative">
+    <section className="relative lg:-mt-24">
       <FormProvider {...formMethods}>
-        <form className="container mx-auto">
-          <div className="grid grid-cols-[200px_1fr] gap-16 bg-emerald-100 py-16 px-20 rounded-lg">
-            <h2 className="h3">Find a clinic or doctor near you.</h2>
-            <div className="grid grid-flow-col auto-cols-auto justify-start gap-6 self-end">
+        <form className="container mx-auto lg:py-0">
+          <div
+            className={cn(
+              "grid bg-emerald-100 rounded-lg",
+              "grid-cols-1 py-4 px-6",
+              "lg:py-8 lg:px-12",
+              "xl:grid-cols-[200px_1fr] xl:py-16 xl:px-20 xl:gap-16"
+            )}
+          >
+            <Typography variant="h3" className="mb-8 xl:mb-0">
+              Find a clinic or doctor near you.
+            </Typography>
+            <div
+              className={cn(
+                "grid justify-start grid-cols-1 gap-4",
+                "lg:grid-cols-[auto_1fr_auto] lg:gap-6",
+                "xl:grid-cols-[auto_auto_auto]"
+              )}
+            >
               <div>
                 <Label className="font-bold">Search Type</Label>
                 <Types />
               </div>
               <AddressInput />
-              <Button className="h-12 self-end">Search</Button>
+              <Button className={cn("w-full", "lg:h-12 lg:self-end")}>
+                Search
+              </Button>
             </div>
           </div>
         </form>
@@ -46,7 +63,7 @@ const AddressInput = () => {
     <InputWrapper>
       <Label>Address, City, or Zip Code</Label>
       <TextField
-        className="w-96"
+        className={cn("xl:w-80")}
         InputProps={{
           classes: {
             root: cn("px-2 h-12 bg-white"),
