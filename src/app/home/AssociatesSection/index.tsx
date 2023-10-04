@@ -1,21 +1,25 @@
 import React from "react";
 import CompanyLogoOne from "@/../public/assets/company-logo-one.svg";
 import Image from "next/image";
+import cn from "@/helpers/cn";
+import { Typography } from "@/components";
 
 const AssociatesSection = () => {
   return (
-    <section className="py-24">
-      <div className="container mx-auto flex flex-row justify-between">
+    <section>
+      <div
+        className={cn("container flex flex-col justify-between", "lg:flex-row")}
+      >
         <div className="max-w-lg">
-          <h2 className="h1">
+          <Typography variant="h2">
             We accept Medicare and most Medicare Advantage plans.
-          </h2>
-          <p className="mt-4 h4 font-normal">
+          </Typography>
+          <Typography className="mt-8">
             We accept most major insurances, including Medicare and Medicare
             Advantage plans from these leading insurance brands.
-          </p>
+          </Typography>
         </div>
-        <div className="max-w-lg flex flex-row flex-wrap gap-10 justify-center">
+        <div className="mt-8 max-w-lg flex flex-row flex-wrap gap-10 lg:justify-center lg:mt-0">
           <Image
             src={CompanyLogoOne}
             alt="company's logo"

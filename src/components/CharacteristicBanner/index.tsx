@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Button, Link } from "@/components";
+import { Button, Link, Typography } from "@/components";
 import CardImage from "@/../public/assets/hero-image.jpg";
 import cn from "@/helpers/cn";
 import { HtmlHTMLAttributes } from "react";
@@ -31,17 +31,17 @@ const CharacteristicBanner = ({
         </div>
 
         <div className={cn("self-center", "mt-8", "lg:mt-0")}>
-          <h2 className="h1">Approved by AARP</h2>
-          <p className="mt-8 h4 font-normal">
+          <Typography variant="h2">Approved by AARP</Typography>
+          <Typography className="mt-8">
             Oak Street Health was selected by AARP as a trusted primary care
             provider because of its dedication to high-quality healthcare for
             all Medicare-eligible adults - the only primary care provider to
             have that distinction.{" "}
-            <Link href="/" className="link">
+            <Link href="/" type="standard">
               Find a provider
             </Link>{" "}
             who cares for AARP members like you.
-          </p>
+          </Typography>
           <Button className="mt-8">Learn more</Button>
         </div>
       </div>

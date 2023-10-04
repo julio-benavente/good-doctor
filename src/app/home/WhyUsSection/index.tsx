@@ -11,7 +11,9 @@ const WhyUsSection = () => {
   return (
     <section>
       <div className="container mx-auto">
-        <h2 className="h1 max-w-sm">Why choose Oak Street Health?</h2>
+        <Typography variant="h2" className="max-w-sm">
+          Why choose Oak Street Health?
+        </Typography>
         <WhyUsList />
         <CharacteristicBanner className="mt-12 lg:mt-24" />
       </div>

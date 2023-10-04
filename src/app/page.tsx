@@ -8,6 +8,7 @@ import AssociatesSection from "./home/AssociatesSection";
 import TestimonialsSection from "./home/TestimonialsSection";
 import FAQSection from "./home/FAQSection";
 import RecentArticlesSection from "./home/RecentArticlesSection";
+import { TestimonialsSlider } from "@/components";
 
 const page = () => {
   return (
@@ -17,7 +18,7 @@ const page = () => {
       <WhyUsSection />
       <ProcessSection />
       <AssociatesSection />
-      <TestimonialsSection />
+      <TestimonialsSlider />
       <FAQSection />
       <RecentArticlesSection />
     </div>
