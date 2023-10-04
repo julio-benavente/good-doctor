@@ -5,7 +5,7 @@ import Slider, { Settings } from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import TestimonialCardItem from "./TestimonialCardItem";
-import { IconButton } from "@/components";
+import { IconButton, Typography } from "@/components";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
@@ -38,8 +38,16 @@ const TestimonialsSlider = ({
     arrows: false,
     autoplay: false,
     infinite: false,
-    slidesToScroll: 3,
     variableWidth: true,
+    slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToScroll: 2,
+        },
+      },
+    ],
   };
 
   const onReInit = (): void => {
@@ -63,22 +71,29 @@ const TestimonialsSlider = ({
   return (
     <section
       className={cn(
-        "py-24 overflow-hidden",
+        "overflow-hidden",
         theme === "neutral" && "bg-terciary",
         theme === "light" && "bg-white",
         theme === "secondary" && "bg-white"
       )}
     >
       <div className="container mx-auto">
-        <div className="grid grid-cols-2 gap-24 justify-between">
-          <h2 className="h1 max-w-xl">
+        <div
+          className={cn(
+            "grid justify-between gap-8",
+            "lg:max-w-lg",
+            "xl:grid-cols-2 xl:max-w-none",
+            "xl:gap-24"
+          )}
+        >
+          <Typography variant="h2" className="xl:max-w-md">
             Why patients choose Oak Street Health.
-          </h2>
-          <p className="h4 font-normal max-w-xl justify-self-end">
+          </Typography>
+          <Typography variant="subtitle1">
             Our doctors and physicians go above and beyond to make sure our
             patients feel safe and well-cared for. But don't take our word for
             it, see what people are saying about us.
-          </p>
+          </Typography>
         </div>
         <div className="mt-12">
           <Slider
