@@ -46,7 +46,7 @@ const HeroSection = () => {
           >
             <Image
               src={HeroImage}
-              className="w-full object-cover object-cover"
+              className="w-full object-cover"
               alt="People laughing"
             />
           </div>

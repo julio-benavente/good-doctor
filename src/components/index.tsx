@@ -13,3 +13,4 @@ export { default as TwentyFourSeven } from "./TwentyFourSeven";
 export { default as BlogsSection } from "./BlogsSection";
 export { default as InputWrapper } from "./InputWrapper";
 export { default as TextArea } from "./TextArea";
+export { default as CharacteristicBanner } from "./CharacteristicBanner";
