@@ -14,3 +14,4 @@ export { default as BlogsSection } from "./BlogsSection";
 export { default as InputWrapper } from "./InputWrapper";
 export { default as TextArea } from "./TextArea";
 export { default as CharacteristicBanner } from "./CharacteristicBanner";
+export { default as Accordion } from "./Accordion";
