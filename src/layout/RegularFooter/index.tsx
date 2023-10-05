@@ -1,10 +1,11 @@
 import { Divider } from "@mui/material";
-import Link from "next/link";
+// import Link from "next/link";
 import React, { ReactNode } from "react";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import cn from "@/helpers/cn";
+import { Link } from "@/components";
 
 const FooterSection = () => {
   return (
@@ -66,21 +67,26 @@ const Social = () => {
         {[
           {
             icon: FacebookIcon,
-            path: "/",
+            path: "https://facebook.com",
           },
           {
             icon: TwitterIcon,
-            path: "/",
+            path: "https://twitter.com",
           },
           {
             icon: YouTubeIcon,
-            path: "/",
+            path: "https://youtube.com",
           },
         ].map((item, i) => {
           return (
-            <a href={item.path} key={i}>
+            <Link
+              key={i}
+              href={item.path}
+              className="link-light"
+              target="_blank"
+            >
               <item.icon className="w-8 h-8 hover:text-white/90" />
-            </a>
+            </Link>
           );
         })}
       </div>

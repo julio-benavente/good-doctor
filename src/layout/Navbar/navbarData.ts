@@ -1,7 +1,24 @@
 import DoctorsImage from "@/../public/assets/doctors-image.jpeg";
 import PatientImage from "@/../public/assets/patient-image.jpeg";
-
 export const navbarData = [
+  {
+    label: "Home",
+    path: "/",
+    isMegaMenu: false,
+  },
+  {
+    label: "Services",
+    path: "/services",
+    isMegaMenu: false,
+  },
+  {
+    label: "Contact",
+    path: "/contact",
+    isMegaMenu: false,
+  },
+];
+
+const oldData = [
   {
     label: "Find a clinic",
     isMegaMenu: true,

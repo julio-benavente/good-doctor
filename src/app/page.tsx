@@ -21,7 +21,6 @@ const page = () => {
       <TestimonialsSlider />
       <FAQSection />
       <BlogsSection />
-      {/* <RecentArticlesSection /> */}
     </div>
   );
 };

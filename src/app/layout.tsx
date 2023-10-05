@@ -1,8 +1,9 @@
 import "./globals.css";
-import Navbar from "@/app/home/Navbar";
 import FooterSection from "@/app/home/FooterSection";
 import type { Metadata } from "next";
 import { cabinet } from "@/helpers/fonts";
+import RegularFooter from "@/layout/RegularFooter";
+import Navbar from "@/layout/Navbar";
 
 export const metadata: Metadata = {
   title: "Model website | Good Doctor",
@@ -18,10 +19,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${cabinet.variable}`}>
         <Navbar />
-
         {children}
-
-        <FooterSection />
+        <RegularFooter />
       </body>
     </html>
   );

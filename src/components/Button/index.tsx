@@ -33,6 +33,7 @@ declare module "@mui/material/styles" {
 
 const Button = ({
   className,
+  href,
   variant = "contained",
   ...props
 }: ButtonProps) => {
