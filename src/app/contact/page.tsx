@@ -32,36 +32,32 @@ const ContactPage = () => {
               If you are not a patient, please complete the form below to help
               us assist you.
             </Typography>
-            <form className="bg-secondary p-8 rounded-lg grid grid-cols-1 gap-y-6">
+            <form className="bg-secondary p-4 rounded-lg grid grid-cols-1 md:grid-cols-2 gap-6 lg:p-8">
               <FormProvider {...formMethods}>
-                <div className="grid grid-cols-2 gap-x-6">
-                  <InputWrapper>
-                    <Label required>First Name</Label>
-                    <TextField name="first-name" />
-                  </InputWrapper>
-                  <InputWrapper>
-                    <Label required>Last Name</Label>
-                    <TextField name="last-name" />
-                  </InputWrapper>
-                </div>
-
-                <div className="grid grid-cols-2 gap-x-6">
-                  <InputWrapper>
-                    <Label required>Email Address</Label>
-                    <TextField name="email" />
-                  </InputWrapper>
-
-                  <InputWrapper>
-                    <Label required>Phone number</Label>
-                    <TextField name="phone-number" />
-                  </InputWrapper>
-                </div>
                 <InputWrapper>
+                  <Label required>First Name</Label>
+                  <TextField name="first-name" />
+                </InputWrapper>
+                <InputWrapper>
+                  <Label required>Last Name</Label>
+                  <TextField name="last-name" />
+                </InputWrapper>
+
+                <InputWrapper>
+                  <Label required>Email Address</Label>
+                  <TextField name="email" />
+                </InputWrapper>
+
+                <InputWrapper>
+                  <Label required>Phone number</Label>
+                  <TextField name="phone-number" />
+                </InputWrapper>
+                <InputWrapper className="col-span-full">
                   <Label required>Company Name</Label>
                   <TextField name="company-name" />
                 </InputWrapper>
 
-                <InputWrapper>
+                <InputWrapper className="col-span-full">
                   <Label required>Message</Label>
                   <TextArea name="message" />
                 </InputWrapper>
