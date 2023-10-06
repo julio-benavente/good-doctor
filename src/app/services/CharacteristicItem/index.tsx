@@ -24,27 +24,31 @@ const CharacteristicItem = ({
     >
       <div
         className={cn(
-          "container grid grid-cols-12 gap-16 mx-auto",
-          type === "regular" && "py-12"
+          "container grid grid-cols-1 mx-auto",
+          "lg:grid-cols-12 lg:gap-x-16 lg:py-0",
+          type === "regular" && "lg:py-12"
         )}
       >
         <div
           className={cn(
-            "py-12 col-span-5 self-center order-1",
-            direction === "rtl" && "order-2"
+            "pt-8 self-center order-2",
+            "lg:col-span-5 lg:order-1 lg:py-12",
+            direction === "rtl" && "lg:order-2"
           )}
         >
           <Typography variant={type === "main" ? "h1" : "h2"}>
             {props.title}
           </Typography>
-          <Typography className="mt-8">{props.content}</Typography>
+          <Typography className="mt-4 lg:mt-8">{props.content}</Typography>
           {type === "regular" && <Button className="mt-8">Learn more</Button>}
         </div>
+
         <div
           className={cn(
-            "col-span-7 order-2",
-            type === "regular" && "px-16 self-center",
-            direction === "rtl" && "order-1"
+            "order-1",
+            "lg:col-span-7 lg:order-2",
+            type === "regular" && "self-center lg:px-8 xl:px-16",
+            direction === "rtl" && "lg:order-1"
           )}
         >
           <div
@@ -57,7 +61,7 @@ const CharacteristicItem = ({
               src={props.image}
               alt="doctor greeting"
               className={cn(
-                "w-full h-full object-cover object-center",
+                "rounded w-full h-full object-cover object-center lg:rounded-none",
                 type === "regular" && "aspect-video rounded h-auto m-auto"
               )}
             />

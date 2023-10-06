@@ -12,6 +12,12 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
 const Navbar = () => {
+  console.log({
+    [`@apply ${cn(
+      "text-green-800 font-bold hover:text-gray-700 hover:underline"
+    )} !important`]: {},
+  });
+
   return (
     <header className="bg-terciary">
       <MobileNavbar />
