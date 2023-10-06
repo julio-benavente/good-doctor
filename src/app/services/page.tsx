@@ -1,3 +1,5 @@
+"use client";
+
 import { TestimonialsSlider } from "@/components";
 import characteristicsListData from "./characteristicsListData";
 import CharacteristicItem from "./CharacteristicItem";

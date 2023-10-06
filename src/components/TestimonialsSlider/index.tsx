@@ -1,4 +1,5 @@
 "use client";
+
 import { useRef, useState } from "react";
 import cn from "@/helpers/cn";
 import Slider, { Settings } from "react-slick";
