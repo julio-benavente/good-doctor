@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 
 import { BlogsSection, TestimonialsSlider } from "@/components";
 import FormSection from "./FormSection";
