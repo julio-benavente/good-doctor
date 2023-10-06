@@ -45,6 +45,8 @@ const HeroSection = () => {
             )}
           >
             <Image
+              priority
+              placeholder="blur"
               src={HeroImage}
               className="w-full object-cover"
               alt="People laughing"
