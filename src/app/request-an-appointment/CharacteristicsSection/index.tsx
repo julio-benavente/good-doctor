@@ -28,9 +28,9 @@ const CharacteristicsSection = () => {
               content:
                 "Call us with questions for your doctor, to arrange prescription refills or to book your next appointment.",
             },
-          ].map((e) => {
+          ].map((e, i) => {
             return (
-              <div className="">
+              <div className="" key={i}>
                 <Typography variant="h3" className="text-white">
                   {" "}
                   {e.title}

@@ -22,9 +22,10 @@ const Accordion = ({ items }: AccordionProps) => {
   return (
     <>
       {items &&
-        items.map((item) => {
+        items.map((item, i) => {
           return (
             <MUIAccordion
+              key={i}
               classes={{
                 root: cn(
                   "border-t-2 border-b-0 rounded-none shadow-none outline-none border-teal-500 h-fit m-0 after:hidden before:hidden max-h-fit"
@@ -66,9 +67,10 @@ const AccordionDetails = ({ className, children }: AccordionDetailsProps) => {
   return (
     <MUIAccordionDetails
       classes={{ root: cn("p-0 pb-8 pr-8 text-lg") }}
-      children={children}
       // {...props}
-    />
+    >
+      {children}
+    </MUIAccordionDetails>
   );
 };
 

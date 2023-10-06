@@ -62,12 +62,12 @@ const NewPatientForm = () => {
         automatic telephone dialing system or an artificial or prerecorded
         voice. This includes (but is not limited to) texts or calls for
         marketing purposes. This consent is not a condition of using our
-        products or services. I agree to Oak Street Health's{" "}
+        products or services. I agree to Oak Street Health&lsquo;s{" "}
         <Link href="https://google.com" target="_blank">
           Text Messaging Terms and Conditions
         </Link>
         . You may opt-out at anytime. To opt-out of text messages, respond to a
-        text with "STOP". Message and data rates may apply.
+        text with &ldquo;STOP&ldquo;. Message and data rates may apply.
       </Typography>
 
       <Checkbox

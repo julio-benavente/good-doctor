@@ -129,7 +129,11 @@ export const MegaMenu = (props) => {
                     href={e.path}
                     className="link grid grid-cols-[auto_1fr] relative h-full"
                   >
-                    <Image src={e.image} className="h-full object-cover w-16" />
+                    <Image
+                      src={e.image}
+                      className="h-full object-cover w-16"
+                      alt="picture"
+                    />
 
                     <div className="py-2 px-4 text-sm">{e.label}</div>
                   </Link>

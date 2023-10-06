@@ -91,8 +91,8 @@ const TestimonialsSlider = ({
           </Typography>
           <Typography variant="subtitle1">
             Our doctors and physicians go above and beyond to make sure our
-            patients feel safe and well-cared for. But don't take our word for
-            it, see what people are saying about us.
+            patients feel safe and well-cared for. But don&lsquo;t take our word
+            for it, see what people are saying about us.
           </Typography>
         </div>
         <div className="mt-12">

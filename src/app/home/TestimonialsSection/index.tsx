@@ -57,8 +57,8 @@ const TestimonialsSection = () => {
           </h2>
           <p className="h4 font-normal max-w-xl justify-self-end">
             Our doctors and physicians go above and beyond to make sure our
-            patients feel safe and well-cared for. But don't take our word for
-            it, see what people are saying about us.
+            patients feel safe and well-cared for. But don&lsquo;t take our word
+            for it, see what people are saying about us.
           </p>
         </div>
         <div className="mt-12">
@@ -121,8 +121,8 @@ const TestimonialCardItem = () => {
         <p className="text-base text-gray-600">Patient survey</p>
       </div>
       <p className="mt-3 text-base">
-        "I feel heard and understood! The people at Oak Street are kind and
-        friendly and I enjoy the service I received!"
+        &ldquo;I feel heard and understood! The people at Oak Street are kind
+        and friendly and I enjoy the service I received!&ldquo;
       </p>
     </div>
   );

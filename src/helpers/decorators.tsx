@@ -3,10 +3,6 @@ import * as Form from "@radix-ui/react-form";
 import { ReactNode } from "react";
 import { FormProvider, useForm, UseFormProps } from "react-hook-form";
 
-export const withDecotator = (story) => (Decotator) => {
-  return <Decotator>{story()}</Decotator>;
-};
-
 export const FormProviderDecorator = ({
   showData = true,
   formProps,

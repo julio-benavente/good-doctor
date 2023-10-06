@@ -33,7 +33,7 @@ const FormSection = () => {
           </Typography>
           <Typography className="mt-4">
             As you get older, primary care has never been more important. If you
-            are covered by Medicare, let's talk about how our primary care
+            are covered by Medicare, let&lsquo;s talk about how our primary care
             doctors can better care for you.
           </Typography>
           <Button href="tel:8888986762" color="secondary" className="mt-8">
