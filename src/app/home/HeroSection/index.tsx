@@ -7,7 +7,7 @@ import Typography from "@/components/Typography";
 
 const HeroSection = () => {
   return (
-    <section className="bg-teal-50">
+    <section className="bg-terciary">
       <div
         className={cn(
           "grid-cols-1",
