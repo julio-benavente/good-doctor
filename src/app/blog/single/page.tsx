@@ -76,6 +76,7 @@ const SingleBlogPage = ({ props }) => {
                   <span className="relative w-full aspect-video block image">
                     <Image
                       className="object-cover object-center w-full h-full rounded-lg"
+                      alt="doctor image"
                       {...props}
                       fill
                     />
