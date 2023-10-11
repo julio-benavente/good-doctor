@@ -2,7 +2,7 @@ import { Button } from "@/components";
 import cn from "@/helpers/cn";
 import Image from "next/image";
 import React from "react";
-import HeroImage from "@/../public/assets/hero-image.jpg";
+import HeroImage from "@/../public/assets/doctor-listening copy.jpg";
 import Typography from "@/components/Typography";
 
 const HeroSection = () => {
