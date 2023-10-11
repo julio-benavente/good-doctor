@@ -38,7 +38,7 @@ const Button = (props: ButtonProps) => {
   return (
     <ThemeProvider theme={theme}>
       {props.href && (
-        <CustomComponent href={props.href!}>
+        <CustomComponent href={props.href!} tabIndex={-1}>
           <BaseButtom {...props} />
         </CustomComponent>
       )}

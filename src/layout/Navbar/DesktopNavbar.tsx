@@ -57,9 +57,9 @@ const DesktopNavbar = () => {
           <Button color="secondary" href="tel:8888986762">
             (888) 898-6762
           </Button>
-          <Link href="/request-an-appointment" passHref>
-            <Button color="appointment">Request Appointment</Button>
-          </Link>
+          <Button color="appointment" href="/request-an-appointment">
+            Request Appointment
+          </Button>
         </div>
       </div>
       {megaMenuData && <MegaMenu {...megaMenuData} />}
