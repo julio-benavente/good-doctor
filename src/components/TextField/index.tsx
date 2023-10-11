@@ -4,20 +4,20 @@ import cn from "@/helpers/cn";
 import {
   TextField as MuiTextField,
   TextFieldProps as MuiTextFieldProps,
+  TextFieldVariants,
 } from "@mui/material";
 import React from "react";
-import {
-  useFormContext,
-  RegisterOptions,
-  UseFormStateProps,
-} from "react-hook-form";
+import { useFormContext, RegisterOptions } from "react-hook-form";
 
-interface TextFieldProps extends MuiTextFieldProps<"outlined"> {
+interface TextFieldProps
+  extends Omit<MuiTextFieldProps<"outlined">, "variant"> {
   name: string;
   registerOptions?: RegisterOptions;
+  variant?: TextFieldVariants;
 }
 
 const TextField = ({
+  variant = "outlined",
   className,
   name,
   registerOptions,
