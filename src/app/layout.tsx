@@ -1,5 +1,4 @@
 import "./globals.css";
-import FooterSection from "@/app/home/FooterSection";
 import type { Metadata } from "next";
 import { cabinet } from "@/helpers/fonts";
 import RegularFooter from "@/layout/RegularFooter";

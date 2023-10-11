@@ -10,6 +10,7 @@ interface LinkProps extends MuiLinkProps {
 }
 
 const Link = ({
+  className,
   external = false,
   type = "standard",
   target,
@@ -26,7 +27,8 @@ const Link = ({
             "hover:after:bg-gray-700",
             "after:w-full after:h-0.5 after:bg-primary after:absolute after:left-0 after:-bottom-0.5 after:hover:w-0",
             "before:h-0.5 before:bg-primary before:absolute before:left-0 before:-bottom-0.5 before:hover:animate-linkunderline before:hover:bg-text-headline",
-          ]
+          ],
+          className
         )}
         component="span"
         {...props}

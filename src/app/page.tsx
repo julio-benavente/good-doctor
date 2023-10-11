@@ -1,5 +1,3 @@
-"use client";
-
 import HeroSection from "./home/HeroSection";
 import SearchSection from "./home/SearchSection";
 import WhyUsSection from "./home/WhyUsSection";

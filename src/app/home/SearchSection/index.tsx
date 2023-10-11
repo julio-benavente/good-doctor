@@ -1,3 +1,5 @@
+"use client";
+
 import cn from "@/helpers/cn";
 import { Button, Typography } from "@/components";
 import TextField from "@mui/material/TextField";

@@ -1,11 +1,10 @@
-import { Divider } from "@mui/material";
 // import Link from "next/link";
-import React, { ReactNode } from "react";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import cn from "@/helpers/cn";
 import { Link } from "@/components";
+import SectionTitle from "./SectionTitle";
 
 const FooterSection = () => {
   return (
@@ -25,15 +24,6 @@ const FooterSection = () => {
 };
 
 export default FooterSection;
-
-const SectionTitle = ({ children }: { children: ReactNode }) => {
-  return (
-    <div>
-      <p className="text-base font-bold text-white">{children}</p>
-      <Divider className="mt-2 mb-3 border-b-2 bg-emerald-200" />
-    </div>
-  );
-};
 
 const Sections = () => {
   return (
