@@ -3,19 +3,26 @@
 import { Accordion, Button } from "@/components";
 import cn from "@/helpers/cn";
 import { useState } from "react";
-import questionsListData from "./questionsListData";
+import faqQuestions from "./questionsListData";
 
 const AccordionSection = () => {
   const [showMoreFAQ, setShowMoreFAQ] = useState(false);
   const handleShowMore = () => setShowMoreFAQ(!showMoreFAQ);
+  const mainQuestions = faqQuestions.slice(0, 5);
+  const secondaryQuestions = faqQuestions.slice(5);
+
   return (
     <div className={cn("lg:col-span-3")}>
-      <Accordion items={questionsListData} />
-      {showMoreFAQ && <Accordion items={questionsListData} />}
+      <Accordion items={mainQuestions} />
+      {showMoreFAQ && secondaryQuestions.length > 0 && (
+        <Accordion items={secondaryQuestions} />
+      )}
 
-      <Button onClick={handleShowMore} className="mt-4">
-        {showMoreFAQ ? "Show less" : "Show more"}
-      </Button>
+      {secondaryQuestions.length > 0 && (
+        <Button onClick={handleShowMore} className="mt-4">
+          {showMoreFAQ ? "Show less" : "Show more"}
+        </Button>
+      )}
     </div>
   );
 };

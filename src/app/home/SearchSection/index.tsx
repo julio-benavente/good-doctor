@@ -1,8 +1,15 @@
 "use client";
 
 import cn from "@/helpers/cn";
-import { Button, Typography } from "@/components";
-import TextField from "@mui/material/TextField";
+import {
+  Button,
+  InputWrapper,
+  Label,
+  RadioGroupItem,
+  RadioGroup,
+  Typography,
+  TextField,
+} from "@/components";
 
 import InputAdornment from "@mui/material/InputAdornment";
 import CloseIcon from "@mui/icons-material/Close";
@@ -14,9 +21,14 @@ const SearchSection = () => {
   const formMethods = useForm({
     mode: "all",
     defaultValues: {
+      address: "",
       type: "clinics",
     },
   });
+
+  const { resetField, watch } = formMethods;
+
+  const resetInput = () => resetField("address");
 
   return (
     <section className="relative lg:-mt-24">
@@ -40,11 +52,44 @@ const SearchSection = () => {
                 "xl:grid-cols-[auto_auto_auto]"
               )}
             >
-              <div>
-                <Label className="font-bold">Search Type</Label>
-                <Types />
-              </div>
-              <AddressInput />
+              <InputWrapper>
+                <Label>Who is making the appointment?</Label>
+                <RadioGroup fullWidth>
+                  <RadioGroupItem name="type" value="clinics">
+                    Clinics
+                  </RadioGroupItem>
+                  <RadioGroupItem name="type" value="doctors">
+                    Doctors
+                  </RadioGroupItem>
+                </RadioGroup>
+              </InputWrapper>
+
+              <InputWrapper>
+                <Label>Who is making the appointment?</Label>
+                <TextField
+                  variant="outlined"
+                  name="address"
+                  className={cn("xl:w-80")}
+                  InputProps={{
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        <PlaceIcon className="text-green-800" />
+                      </InputAdornment>
+                    ),
+
+                    endAdornment: watch("address") ? (
+                      <InputAdornment position="end">
+                        <CloseIcon
+                          className="cursor-pointer"
+                          onClick={resetInput}
+                        />
+                      </InputAdornment>
+                    ) : (
+                      <></>
+                    ),
+                  }}
+                />
+              </InputWrapper>
               <Button className={cn("w-full", "lg:h-12 lg:self-end")}>
                 Search
               </Button>
@@ -56,102 +101,41 @@ const SearchSection = () => {
   );
 };
 
-const AddressInput = () => {
-  const { register, getValues, watch, resetField } = useFormContext();
+// const AddressInput = () => {
+//   const { register, getValues, watch, resetField } = useFormContext();
 
-  const resetInput = () => resetField("address");
+//   const resetInput = () => resetField("address");
 
-  return (
-    <InputWrapper>
-      <Label>Address, City, or Zip Code</Label>
-      <TextField
-        className={cn("xl:w-80")}
-        InputProps={{
-          classes: {
-            root: cn("px-2 h-12 bg-white"),
-            input: cn("py-2"),
-            focused: cn("border-green-400"),
-            notchedOutline: cn("border-2 border-emerald-500"),
-          },
-          startAdornment: (
-            <InputAdornment position="start">
-              <PlaceIcon className="text-green-800" />
-            </InputAdornment>
-          ),
+//   return (
+//     <InputWrapper>
+//       <Label>Address, City, or Zip Code</Label>
+//       <TextField
+//         className={cn("xl:w-80")}
+//         InputProps={{
+//           classes: {
+//             root: cn("px-2 h-12 bg-white"),
+//             input: cn("py-2"),
+//             focused: cn("border-green-400"),
+//             notchedOutline: cn("border-2 border-emerald-500"),
+//           },
+//           startAdornment: (
+//             <InputAdornment position="start">
+//               <PlaceIcon className="text-green-800" />
+//             </InputAdornment>
+//           ),
 
-          endAdornment: watch("address") ? (
-            <InputAdornment position="end">
-              <CloseIcon className="cursor-pointer" onClick={resetInput} />
-            </InputAdornment>
-          ) : (
-            <></>
-          ),
-        }}
-        {...register("address")}
-      />
-    </InputWrapper>
-  );
-};
-
-const Types = () => {
-  return (
-    <div className="grid auto-cols-auto grid-flow-col gap-2 p-1 bg-white border-2 border-emerald-500 rounded">
-      <RadioType name="clinics">Clinics</RadioType>
-      <RadioType name="doctors">Doctors</RadioType>
-    </div>
-  );
-};
-
-const RadioType = ({
-  children,
-  name,
-}: {
-  children: ReactNode;
-  name: string;
-}) => {
-  const { register, getValues, watch } = useFormContext();
-
-  return (
-    <label
-      className={cn(
-        "h-9 py-1 px-6 rounded grid place-items-center text-base font-bold cursor-pointer",
-        watch("type") === name && "bg-slate-200"
-      )}
-      htmlFor={name}
-    >
-      {children}
-      <input
-        className="hidden"
-        type="radio"
-        id={name}
-        value={name}
-        {...register("type", { value: "clinics" })}
-      />
-    </label>
-  );
-};
-
-const Label = ({
-  className,
-  children,
-  ...props
-}: HTMLAttributes<HTMLLabelElement>) => {
-  return (
-    <label className="font-bold text-base" {...props}>
-      {children}
-    </label>
-  );
-};
-
-const InputWrapper = ({
-  className,
-  ...props
-}: HtmlHTMLAttributes<HTMLDivElement>) => {
-  return (
-    <div className="grid grid-flow-row gap--0.5" {...props}>
-      {props.children}
-    </div>
-  );
-};
+//           endAdornment: watch("address") ? (
+//             <InputAdornment position="end">
+//               <CloseIcon className="cursor-pointer" onClick={resetInput} />
+//             </InputAdornment>
+//           ) : (
+//             <></>
+//           ),
+//         }}
+//         {...register("address")}
+//       />
+//     </InputWrapper>
+//   );
+// };
 
 export default SearchSection;

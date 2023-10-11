@@ -1,9 +1,10 @@
 "use client";
 
 import cn from "@/helpers/cn";
-import { TextField as MuiTextField } from "@mui/material";
-import { BaseTextFieldProps } from "@mui/material/TextField";
-import * as Form from "@radix-ui/react-form";
+import {
+  TextField as MuiTextField,
+  TextFieldProps as MuiTextFieldProps,
+} from "@mui/material";
 import React from "react";
 import {
   useFormContext,
@@ -11,15 +12,16 @@ import {
   UseFormStateProps,
 } from "react-hook-form";
 
-interface TextFieldProps extends BaseTextFieldProps {
+interface TextFieldProps extends MuiTextFieldProps<"outlined"> {
   name: string;
   registerOptions?: RegisterOptions;
 }
 
 const TextField = ({
-  classes,
+  className,
   name,
   registerOptions,
+  InputProps,
   ...props
 }: TextFieldProps) => {
   const {
@@ -28,22 +30,22 @@ const TextField = ({
   } = useFormContext();
 
   const isError = Boolean(errors[name]);
-
   return (
     <MuiTextField
+      className={className}
       InputProps={{
         classes: {
-          root: cn("group bg-white"),
+          root: cn("group bg-white rounded-md"),
           input: cn("h-12 py-2 box-border"),
-          focused: cn("border-emerald-300/80"),
           notchedOutline: cn(
-            "border-2 border-emerald-300",
-            "group-focus-within:ring-input",
+            "border-2 border-secondary-texture",
+            "group-focus-within:ring-input group-focus-within:border-primary",
             isError &&
               "border-red-500 focus:border-red-500 group-focus-within:ring-4 group-focus-within:ring-red-500/50"
           ),
-          ...classes,
+          ...InputProps?.classes,
         },
+        ...InputProps,
       }}
       {...props}
       {...register(name, { ...registerOptions })}

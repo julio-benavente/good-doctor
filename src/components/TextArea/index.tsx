@@ -38,7 +38,7 @@ const TextField = ({
           focused: cn("border-emerald-300/80"),
           notchedOutline: cn(
             "border-2 border-emerald-300",
-            "group-focus-within:ring-input",
+            "group-focus-within:ring-input group-focus-within:border-primary",
             isError &&
               "border-red-500 focus:border-red-500 group-focus-within:ring-4 group-focus-within:ring-red-500/50"
           ),

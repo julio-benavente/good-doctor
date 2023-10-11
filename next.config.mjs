@@ -17,4 +17,6 @@ const nextConfig = {
   pageExtensions: ["js", "jsx", "mdx", "md", "ts", "tsx"],
 };
 
-export default withMDX(withBundleAnalyzer(nextConfig));
+export default withMDX(
+  withBundleAnalyzer({ enabled: process.env.ANALYZE === "true" })(nextConfig)
+);

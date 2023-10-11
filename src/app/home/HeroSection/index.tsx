@@ -30,7 +30,11 @@ const HeroSection = () => {
             personalized primary care so you can stay healthy and focus on doing
             the things you love.
           </Typography>
-          <Button color="appointment" className="mt-4">
+          <Button
+            color="appointment"
+            className="mt-4"
+            href="/request-an-appointment"
+          >
             Request appointment
           </Button>
         </div>
