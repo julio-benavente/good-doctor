@@ -9,7 +9,7 @@ import { Suspense, useEffect, useRef, useState } from "react";
 import TableOfContents from "./TableOfContents";
 import cn from "@/helpers/cn";
 
-const SingleBlogPage = ({ props }) => {
+const SingleBlogPage = () => {
   // const response = await fetch("http://localhost:1337/api/single-post");
   // const data = await response.json();
   // const markdown = data?.data?.attributes?.markdown;
@@ -77,6 +77,7 @@ const SingleBlogPage = ({ props }) => {
                     <Image
                       className="object-cover object-center w-full h-full rounded-lg"
                       alt="doctor image"
+                      src=""
                       {...props}
                       fill
                     />
