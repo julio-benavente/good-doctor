@@ -36,7 +36,7 @@ const FormSection = () => {
       >
         <div className={cn("lg:pr-16 xl:pr-24")}>
           <Typography variant="h1" className="">
-            Become a Patient at Oak Street Health
+            Become a Patient at The Good Doctor
           </Typography>
           <Typography className="mt-4">
             As you get older, primary care has never been more important. If you

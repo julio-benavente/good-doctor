@@ -56,13 +56,13 @@ const NewPatientForm = () => {
       </div>
 
       <Typography variant="caption" className="text-gray-600" component="p">
-        <strong>Disclosure</strong>: I agree that Oak Street Health (and its
+        <strong>Disclosure</strong>: I agree that The Good Doctor (and its
         affiliates, agents, contractors, and partners) may contact me by email,
         phone or text message for any purpose, including calls placed using
         automatic telephone dialing system or an artificial or prerecorded
         voice. This includes (but is not limited to) texts or calls for
         marketing purposes. This consent is not a condition of using our
-        products or services. I agree to Oak Street Health&lsquo;s{" "}
+        products or services. I agree to The Good Doctor&lsquo;s{" "}
         <Link href="https://google.com" target="_blank">
           Text Messaging Terms and Conditions
         </Link>

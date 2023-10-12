@@ -9,7 +9,7 @@ const characteristicsListData: CharacteristicItemProps[] = [
     direction: "ltr",
     title: "Specialized care for older adults like you.",
     content:
-      "At Oak Street Health, we specialize in outstanding care for older adults. And you don't have to lift a finger. From dedicated doctors and care team members who take the time to know and understand your individual health needs to help with Medicare and insurance paperwork, we help eliminate the hassles to help you take care of yourself.",
+      "At The Good Doctor, we specialize in outstanding care for older adults. And you don't have to lift a finger. From dedicated doctors and care team members who take the time to know and understand your individual health needs to help with Medicare and insurance paperwork, we help eliminate the hassles to help you take care of yourself.",
     learnMoreLink: "/",
     image: ImageTwo,
   },
@@ -43,7 +43,7 @@ const characteristicsListData: CharacteristicItemProps[] = [
     type: "regular",
     title: "Making the most of Medicare.",
     content:
-      "Getting the most from your Medicare plan can be a game-changer, so your choice of plan is key. As an Oak Street Health patient, you have a personal Medicare specialist to help you understand your options so you can make the best decision on what's right for you.",
+      "Getting the most from your Medicare plan can be a game-changer, so your choice of plan is key. As an The Good Doctor patient, you have a personal Medicare specialist to help you understand your options so you can make the best decision on what's right for you.",
     learnMoreLink: "/",
     image: ImageTwo,
   },

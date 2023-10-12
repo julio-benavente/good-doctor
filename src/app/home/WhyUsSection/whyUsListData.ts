@@ -25,7 +25,7 @@ const whyUsListData = [
   {
     title: "More Than a Doctor's Office",
     description:
-      "A healthcare and community center in one, your neighborhood Oak Street Health center is a place to socialize and enjoy feel-good activities and events, including craft-making, education, and exercise classes.",
+      "A healthcare and community center in one, your neighborhood The Good Doctor center is a place to socialize and enjoy feel-good activities and events, including craft-making, education, and exercise classes.",
     image: DoctorGreetingImage,
     imageAlt: "Image of doctors who actually listen.",
     learnMorePath: "/",

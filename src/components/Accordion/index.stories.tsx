@@ -12,7 +12,7 @@ const meta: Meta<typeof Accordion> = {
     items: [
       {
         id: "1",
-        question: "Who can become an Oak Street Health patient?",
+        question: "Who can become an The Good Doctor patient?",
         answer: (
           <>
             Our doctors specialize caring for anyone with Medicare, including
@@ -27,7 +27,7 @@ const meta: Meta<typeof Accordion> = {
       },
       {
         id: "2",
-        question: "Who can become an Oak Street Health patient?",
+        question: "Who can become an The Good Doctor patient?",
         answer: (
           <>
             Our doctors specialize caring for anyone with Medicare, including

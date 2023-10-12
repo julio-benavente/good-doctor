@@ -81,7 +81,7 @@ const Social = () => {
         })}
       </div>
       <p className="text-white text-base mt-8">
-        At Oak Street Health, our doctors and nurse practitioners focus on
+        At The Good Doctor, our doctors and nurse practitioners focus on
         treating adults on Medicare. Our primary care physicians and doctors are
         accepting new patients at a center near you.
       </p>
@@ -92,7 +92,7 @@ const Social = () => {
 const Copyright = () => {
   return (
     <p className="mt-12 col-span-full text-white text-base lg:mt-8">
-      © 2023 Oak Street Health 30 W Monroe St, #1200, Chicago, IL 60603
+      © 2023 The Good Doctor 30 W Monroe St, #1200, Chicago, IL 60603
     </p>
   );
 };

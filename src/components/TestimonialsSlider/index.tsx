@@ -88,7 +88,7 @@ const TestimonialsSlider = ({
           )}
         >
           <Typography variant="h2" className="xl:max-w-md">
-            Why patients choose Oak Street Health.
+            Why patients choose The Good Doctor.
           </Typography>
           <Typography variant="subtitle1">
             Our doctors and physicians go above and beyond to make sure our

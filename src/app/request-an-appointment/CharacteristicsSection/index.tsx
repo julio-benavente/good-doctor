@@ -7,7 +7,7 @@ const CharacteristicsSection = () => {
     <section className="bg-primary">
       <div className="container py-24">
         <Typography variant="h2" className="text-white max-w-sm">
-          Experience the Oak Street Health difference.
+          Experience the The Good Doctor difference.
         </Typography>
         <div
           className={cn(

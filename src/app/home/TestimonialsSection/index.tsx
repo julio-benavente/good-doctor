@@ -52,9 +52,7 @@ const TestimonialsSection = () => {
     <section className="py-24 bg-teal-50 overflow-hidden">
       <div className="container mx-auto">
         <div className="grid grid-cols-2 gap-24 justify-between">
-          <h2 className="h1 max-w-xl">
-            Why patients choose Oak Street Health.
-          </h2>
+          <h2 className="h1 max-w-xl">Why patients choose The Good Doctor.</h2>
           <p className="h4 font-normal max-w-xl justify-self-end">
             Our doctors and physicians go above and beyond to make sure our
             patients feel safe and well-cared for. But don&lsquo;t take our word

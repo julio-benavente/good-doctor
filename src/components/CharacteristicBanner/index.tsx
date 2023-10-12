@@ -33,7 +33,7 @@ const CharacteristicBanner = ({
         <div className={cn("self-center", "mt-8", "lg:mt-0")}>
           <Typography variant="h2">Approved by AARP</Typography>
           <Typography className="mt-8">
-            Oak Street Health was selected by AARP as a trusted primary care
+            The Good Doctor was selected by AARP as a trusted primary care
             provider because of its dedication to high-quality healthcare for
             all Medicare-eligible adults - the only primary care provider to
             have that distinction.{" "}

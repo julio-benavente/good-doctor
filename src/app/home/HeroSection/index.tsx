@@ -24,7 +24,7 @@ const HeroSection = () => {
         >
           <Typography variant="h1">Our specialty is YOU.</Typography>
           <Typography className="mt-4">
-            At Oak Street Health, we specialize in caring for older adults like
+            At The Good Doctor, we specialize in caring for older adults like
             you. We make your healthcare easy with an entire team dedicated to
             you. They&lsquo;ll take care of everything, providing you with
             personalized primary care so you can stay healthy and focus on doing

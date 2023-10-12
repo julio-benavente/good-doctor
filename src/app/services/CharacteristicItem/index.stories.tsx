@@ -13,7 +13,7 @@ const meta: Meta<typeof CharacteristicItem> = {
     direction: "ltr",
     title: "Specialized care for older adults like you.",
     content:
-      "At Oak Street Health, we specialize in outstanding care for older adults. And you don't have to lift a finger. From dedicated doctors and care team members who take the time to know and understand your individual health needs to help with Medicare and insurance paperwork, we help eliminate the hassles to help you take care of yourself.",
+      "At The Good Doctor, we specialize in outstanding care for older adults. And you don't have to lift a finger. From dedicated doctors and care team members who take the time to know and understand your individual health needs to help with Medicare and insurance paperwork, we help eliminate the hassles to help you take care of yourself.",
     learnMoreLink: "/",
     image: ImageTwo,
   },
