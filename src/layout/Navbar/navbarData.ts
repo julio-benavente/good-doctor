@@ -12,6 +12,11 @@ export const navbarData = [
     isMegaMenu: false,
   },
   {
+    label: "Blog",
+    path: "/blog",
+    isMegaMenu: false,
+  },
+  {
     label: "Contact",
     path: "/contact",
     isMegaMenu: false,
