@@ -18,7 +18,7 @@ import InputWrapper from "./InputWrapper";
 const NewPatientForm = () => {
   return (
     <>
-      <div className="grid grid-cols-2 gap-x-6">
+      <div className={cn("grid gap-x-6 gap-y-4", "md:grid-cols-2 md:gap-y-0")}>
         <InputWrapper>
           <Label required>First Name</Label>
           <TextField name="first-name" />
@@ -29,7 +29,7 @@ const NewPatientForm = () => {
         </InputWrapper>
       </div>
 
-      <div className="grid grid-cols-2 gap-x-6">
+      <div className={cn("grid gap-x-6 gap-y-4", "md:grid-cols-2 md:gap-y-0")}>
         <InputWrapper>
           <Label required>Patient Zip code</Label>
           <TextField name="patient-zip-code" />
@@ -41,7 +41,7 @@ const NewPatientForm = () => {
         </InputWrapper>
       </div>
 
-      <div className="grid grid-cols-3 gap-x-6 gap-y-0.5">
+      <div className={cn("grid grid-cols-3 gap-x-4 gap-y-0.5", "md:gap-y-6")}>
         <Label required className="col-span-full">
           Patient Date of Birth
         </Label>
@@ -78,7 +78,7 @@ const NewPatientForm = () => {
         }}
       />
 
-      <Button type="submit" className="w-fit">
+      <Button type="button" className="w-fit">
         Submit
       </Button>
     </>

@@ -13,6 +13,7 @@ import NewPatientForm from "./NewPatientForm";
 import InputWrapper from "./InputWrapper";
 import ExistingPatientInformation from "./ExistingPatientInformation";
 import CaregiverInformation from "./CaregiverInformation";
+import cn from "@/helpers/cn";
 
 const FormSection = () => {
   const formMethods = useForm({
@@ -26,8 +27,14 @@ const FormSection = () => {
   };
   return (
     <section className="bg-terciary py-8">
-      <div className="container mx-auto grid grid-cols-2 gap-12">
-        <div className="pr-24">
+      <div
+        className={cn(
+          "container mx-auto grid gap-y-12",
+          "lg:grid-cols-2",
+          "xl:gap-x-12"
+        )}
+      >
+        <div className={cn("lg:pr-16 xl:pr-24")}>
           <Typography variant="h1" className="">
             Become a Patient at Oak Street Health
           </Typography>
@@ -41,7 +48,10 @@ const FormSection = () => {
           </Button>
         </div>
         <form
-          className="bg-white p-8 rounded-lg flex gap-4 flex-col"
+          className={cn(
+            "bg-white p-6 rounded-lg flex gap-4 flex-col",
+            "md:p-8"
+          )}
           onSubmit={formMethods.handleSubmit(onSubmit)}
         >
           <FormProvider {...formMethods}>

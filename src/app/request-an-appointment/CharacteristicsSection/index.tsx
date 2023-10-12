@@ -1,4 +1,5 @@
 import { TwentyFourSeven, Typography } from "@/components";
+import cn from "@/helpers/cn";
 import React from "react";
 
 const CharacteristicsSection = () => {
@@ -8,7 +9,13 @@ const CharacteristicsSection = () => {
         <Typography variant="h2" className="text-white max-w-sm">
           Experience the Oak Street Health difference.
         </Typography>
-        <div className="grid grid-cols-3 gap-8 mt-12">
+        <div
+          className={cn(
+            "grid gap-x-8 gap-y-12 mt-12",
+            "md:grid-cols-2",
+            "lg:grid-cols-3 lg:gap-y-0"
+          )}
+        >
           {[
             {
               title: "See your doctor today or tomorrow",
