@@ -14,7 +14,7 @@ const ContactPage = () => {
               quickly as possible. At this time, we are prioritizing calls
               related to the care of our patients. If you&lsquo;re a patient, a
               caregiver, or a provider reaching out on behalf of a patient,
-              please call <Link href="tel:8888986762">(888) 444-7777</Link>
+              please call <Link href="tel:888888888888">(888) 888-8888</Link>
             </Typography>
             <Typography variant="subtitle1">
               If you are not a patient, please complete the form below to help

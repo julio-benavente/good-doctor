@@ -8,8 +8,8 @@ const CaregiverInformation = () => {
       </Typography>
 
       <Typography>
-        Call our team to schedule a first appointment or see if Oak Street
-        Health is the right fit for your loved ones.
+        Call our team to schedule a first appointment or see if The Good Doctor
+        is the right fit for your loved ones.
       </Typography>
       <Button href="tel:8005596691" color="primary">
         (800) 559-6691

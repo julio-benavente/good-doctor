@@ -119,8 +119,8 @@ const TestimonialCardItem = () => {
         <p className="text-base text-gray-600">Patient survey</p>
       </div>
       <p className="mt-3 text-base">
-        &ldquo;I feel heard and understood! The people at Oak Street are kind
-        and friendly and I enjoy the service I received!&ldquo;
+        &ldquo;I feel heard and understood! The people at The Good Doctor are
+        kind and friendly and I enjoy the service I received!&ldquo;
       </p>
     </div>
   );

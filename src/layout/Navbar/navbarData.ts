@@ -1,5 +1,6 @@
 import DoctorsImage from "@/../public/assets/doctors-image.jpeg";
 import PatientImage from "@/../public/assets/patient-image.jpeg";
+
 export const navbarData = [
   {
     label: "Home",
@@ -176,14 +177,14 @@ const oldData = [
     },
   },
   {
-    label: "Why Oak Street",
+    label: "Why The Good Doctor",
     isMegaMenu: true,
     sectionOne: {
       title: "Primary care centers & clinics accepting Medicare",
       cta: "Find clinics near you",
     },
     sectionTwo: {
-      title: "Why Oak Street",
+      title: "Why The Good Doctor",
       data: [
         {
           label: "Atlanta, GA",

@@ -1,9 +1,7 @@
 import { Divider } from "@/components";
-import { readdir } from "fs/promises";
 import { BlogMetadataProps } from "@/types";
 import BlogSummary from "./components/BlogSummary";
 import BlogCardItem from "./components/BlogCardItem";
-import { getBlogsData } from "@/helpers/getBlogsData";
 import cn from "@/helpers/cn";
 
 const MainSection = ({ data }) => {
@@ -25,7 +23,7 @@ const MainSection = ({ data }) => {
                 return (
                   <>
                     <BlogCardItem key={i} {...blog} />
-                    <Divider className="[&:last-of-type]:hidden my-0" />
+                    <Divider key={i} className="[&:last-of-type]:hidden my-0" />
                   </>
                 );
               })}

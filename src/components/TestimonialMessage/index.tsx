@@ -20,13 +20,13 @@ const TestimonialMessage = () => {
 
       <div className="mr-4 self-center">
         <Typography variant="h3" className="text-primary">
-          The staff here is kind and makes me feel comfortable. Oak Street
-          Health works with many hospitals, which makes it easy for me to always
-          have access to good care and its comforting to know that I can always
-          see a friendly primary care doctor near me.
+          The staff here is kind and makes me feel comfortable. The Good Doctor
+          works with many hospitals, which makes it easy for me to always have
+          access to good care and its comforting to know that I can always see a
+          friendly primary care doctor near me.
         </Typography>
         <Typography className="mt-4">
-          Linda, Patient at Oak Street Roosevelt
+          Linda, Patient at The Good Doctor
         </Typography>
       </div>
     </div>
