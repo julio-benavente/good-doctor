@@ -7,8 +7,11 @@ import TestimonialsSection from "./home/TestimonialsSection";
 import FAQSection from "./home/FAQSection";
 import RecentArticlesSection from "./home/RecentArticlesSection";
 import { BlogsSection, TestimonialsSlider } from "@/components";
+import { getBlogsData } from "@/helpers/getBlogsData";
 
-const page = () => {
+const page = async () => {
+  const blogsData = await getBlogsData({ numberOfItems: 4 });
+
   return (
     <div className="">
       <HeroSection />
@@ -18,7 +21,7 @@ const page = () => {
       <AssociatesSection />
       <TestimonialsSlider />
       <FAQSection />
-      <BlogsSection />
+      <BlogsSection data={blogsData} />
     </div>
   );
 };

@@ -1,13 +1,11 @@
 import Link from "next/link";
 import React from "react";
-import DoctorListeningImage from "@/../public/assets/doctor-listening.jpg";
-// import SectionDecoration from "@/../public/assets/section-decoration.svg";
 import SectionDecoration from "@/../public/assets/section-decoration";
-import Image from "next/image";
 import RecentArticlesList from "./RecentArticlesList";
 import cn from "@/helpers/cn";
+import { Typography } from "@/components";
 
-const RecentArticlesSection = () => {
+const RecentArticlesSection = ({ data }) => {
   return (
     <section className="relative bg-secondary z-0 overflow-hidden">
       <SectionDecoration
@@ -18,12 +16,12 @@ const RecentArticlesSection = () => {
       />
       <div className="container mx-auto">
         <div className="grid grid-flow-col justify-between items-end">
-          <h2 className="h2">Recent articles</h2>
-          <Link href="/" className="link-action">
+          <Typography variant="h2">Recent articles</Typography>
+          <Link href="/blog" className="link-action">
             View more
           </Link>
         </div>
-        <RecentArticlesList />
+        <RecentArticlesList blogs={data} />
       </div>
     </section>
   );

@@ -6,21 +6,7 @@ import { readFile, readdir } from "fs/promises";
 import Image from "next/image";
 import BlogImage from "@/../public/assets/doctor-three.jpg";
 import cn from "@/helpers/cn";
-
-interface Metadata {
-  title: string;
-  date: Date;
-  slug: string;
-  image: string;
-  imageAlt: string;
-  author: string;
-  reviewdBy: string;
-  excerpt: string;
-  tableOfContents: Array<{
-    label: string;
-    path: string;
-  }>;
-}
+import { BlogMetadataProps } from "@/types";
 
 async function getData() {
   const files = await readdir("./src/app/blog/entries");
@@ -40,7 +26,7 @@ async function getData() {
 
 const BlogPage = async () => {
   const data = await getData();
-  const blogsSorted: Metadata[] = data
+  const blogsSorted: BlogMetadataProps[] = data
     .map((item) => item.metadata)
     .sort((a, b) => b.date - a.date);
   const [firstBlog, ...restOfBlogs] = blogsSorted;
@@ -79,7 +65,7 @@ const BlogPage = async () => {
 
 export default BlogPage;
 
-interface BlogCardItemProps extends Metadata {
+interface BlogCardItemProps extends BlogMetadataProps {
   type?: "main" | "regular";
 }
 
