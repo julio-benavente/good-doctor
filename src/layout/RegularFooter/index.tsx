@@ -38,7 +38,7 @@ const Sections = () => {
             { location: "Contact", path: "/contact" },
           ].map((item) => {
             return (
-              <Link key={item.location} href={item.path} className="link-light">
+              <Link key={item.location} href={item.path} className="text-white">
                 {item.location}
               </Link>
             );
@@ -72,7 +72,7 @@ const Social = () => {
             <Link
               key={i}
               href={item.path}
-              className="link-light"
+              className="text-white"
               target="_blank"
             >
               <item.icon className="w-8 h-8 hover:text-white/90" />
