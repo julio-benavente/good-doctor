@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import SectionDecoration from "@/../public/assets/section-decoration";
 import RecentArticlesList from "./RecentArticlesList";
 import cn from "@/helpers/cn";

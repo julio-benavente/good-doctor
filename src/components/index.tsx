@@ -15,3 +15,4 @@ export { default as InputWrapper } from "./InputWrapper";
 export { default as TextArea } from "./TextArea";
 export { default as CharacteristicBanner } from "./CharacteristicBanner";
 export { default as Accordion } from "./Accordion";
+export { default as Divider } from "./Divider";
