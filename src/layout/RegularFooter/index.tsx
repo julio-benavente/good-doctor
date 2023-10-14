@@ -34,6 +34,7 @@ const Sections = () => {
           {[
             { location: "Home", path: "/" },
             { location: "Appointment", path: "/request-an-appointment" },
+            { location: "Blog", path: "/blog" },
             { location: "Services", path: "/services" },
             { location: "Contact", path: "/contact" },
           ].map((item) => {

@@ -55,7 +55,7 @@ const DesktopNavbar = () => {
 
         <div className="grid grid-flow-col gap-x-4">
           <Button color="secondary" href="tel:8888888888">
-            (888) 898-6762
+            (888) 888-8888
           </Button>
           <Button color="appointment" href="/request-an-appointment">
             Request Appointment
