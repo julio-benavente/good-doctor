@@ -25,7 +25,7 @@ const RadioGroupItem = ({ className, ...props }: RadioProps) => {
       {props.children}
       <input
         id={`field-${props.name}-${props.value}`}
-        className="h-0 w-0"
+        className="h-0 w-0 absolute"
         type="radio"
         value={props.value}
         {...register(props.name!, { value: props.value })}

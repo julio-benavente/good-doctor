@@ -1,5 +1,6 @@
 import { BlogMetadataProps } from "@/types";
 import { readdir } from "fs/promises";
+import { MDXComponents, MDXContent } from "mdx/types";
 // import path from "path";
 
 interface GetBlogsDataProps {
@@ -38,3 +39,16 @@ export async function getBlogsData({
 
   return blogsSorted;
 }
+
+export const getSingleBlogData = async (
+  slug: string
+): Promise<{
+  MDXContent: MDXContent;
+  metadata: BlogMetadataProps;
+}> => {
+  const file = await require(`../app/blog/entries/${slug}.mdx`);
+  return {
+    MDXContent: file.default,
+    metadata: file.metadata as BlogMetadataProps,
+  };
+};

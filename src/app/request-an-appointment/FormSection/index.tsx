@@ -26,7 +26,7 @@ const FormSection = () => {
     console.log(data);
   };
   return (
-    <section className="bg-terciary py-8">
+    <section className="bg-terciary">
       <div
         className={cn(
           "container mx-auto grid gap-y-12",
