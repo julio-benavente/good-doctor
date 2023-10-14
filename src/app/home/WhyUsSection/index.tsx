@@ -57,12 +57,12 @@ const WhyUsCardItem = (props: {
         {props.title}
       </Typography>
       <Typography className="mt-3">{props.description}</Typography>
-      <Link
+      {/* <Link
         href={props.learnMorePath}
         className="relative block mt-4 link-action md:mt-8"
       >
         Learn more
-      </Link>
+      </Link> */}
     </div>
   );
 };

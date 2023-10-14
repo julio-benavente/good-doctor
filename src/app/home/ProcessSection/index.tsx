@@ -53,7 +53,8 @@ const StepCardItem = (props: {
       <h3 className={cn("h3 mt-8 text-white", "lg:mt-8")}>{props.title}</h3>
       <p className="mt-4 text-white">{props.description}</p>
       <Link
-        href={props.catLink}
+        // href={props.catLink}
+        href="/request-an-appointment"
         className="relative block mt-6 link-action-light lg:mt-8"
       >
         {props.ctaText}
