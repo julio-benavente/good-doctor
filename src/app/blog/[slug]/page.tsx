@@ -1,7 +1,5 @@
 import { getBlogsData, getSingleBlogData } from "@/helpers/getBlogsData";
-import { BlogMetadataProps } from "@/types";
-import blogComponents from "./blogComponents";
-import { Typography } from "@/components";
+import Article from "./Article";
 
 export async function generateStaticParams() {
   const posts = await getBlogsData({});
@@ -13,23 +11,7 @@ export async function generateStaticParams() {
 
 const SingleBlogPage = async ({ params }: { params: { slug: string } }) => {
   const { MDXContent, metadata } = await getSingleBlogData(params.slug);
-  return (
-    <article>
-      <section className="container pb-0">
-        <div>
-          <Typography variant="h1">{metadata.title}</Typography>
-          <Typography>Written by {metadata.author}</Typography>
-          {metadata.reviewdBy && (
-            <Typography>Reviewd by {metadata.reviewdBy}</Typography>
-          )}
-        </div>
-      </section>
-      <section className="container pt-0">
-        {/* @ts-ignore:Unreachable code */}
-        <MDXContent components={{ ...blogComponents }} />
-      </section>
-    </article>
-  );
+  return <Article MDXContent={MDXContent} metadata={metadata} />;
 };
 
 export default SingleBlogPage;
