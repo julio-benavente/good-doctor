@@ -26,7 +26,7 @@ const CharacteristicItem = ({
         className={cn(
           "container grid grid-cols-1 mx-auto",
           "lg:grid-cols-12 lg:gap-x-16 lg:py-0",
-          type === "regular" && "lg:py-12"
+          type === "regular" && "lg:py-12 rounded"
         )}
       >
         <div
@@ -51,18 +51,13 @@ const CharacteristicItem = ({
             direction === "rtl" && "lg:order-1"
           )}
         >
-          <div
-            className={cn(
-              "w-full h-full"
-              //   type === "regular" && "aspect-video"
-            )}
-          >
+          <div className={cn("w-full h-full")}>
             <Image
               src={props.image}
               alt="doctor greeting"
               className={cn(
-                "rounded w-full h-full object-cover object-center lg:rounded-none",
-                type === "regular" && "aspect-video rounded h-auto m-auto"
+                "w-full h-full object-cover object-center",
+                type === "regular" && "aspect-video rounded-lg h-auto m-auto"
               )}
             />
           </div>

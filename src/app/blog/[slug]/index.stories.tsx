@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import Article from "./Article";
-import blogEntry from "@/app/blog/entries/best-recommendations-for-a-type-2-diabetes-diet-plan.mdx";
+import blogEntry from "@/app/blog/entries/cancer-prevention-strategies.mdx";
 
 const meta: Meta<typeof Article> = {
   title: "Pages/Single blog (Article)",
@@ -11,17 +11,40 @@ const meta: Meta<typeof Article> = {
   args: {
     MDXContent: blogEntry,
     metadata: {
-      title: "Best Recommendations for a Type 2 Diabetes Diet Plan",
-      slug: "best-recommendations-for-a-type-2-diabetes-diet-plan",
-      image: "/assets/doctor-four.jpg",
+      date: new Date("2023-12-15").toString(),
+      title: "Guarding Against the Silent Threat: Cancer Prevention Strategies",
+      slug: "cancer-prevention-strategies",
+      image: "/assets/doctor-one.jpg",
       imageAlt: "Image of a doctor",
-      date: new Date("2025-01-01T00:00:00.000Z"),
-      author: "Molly Burford",
-      reviewdBy: "Dr. Katy Brodski-Quigley",
+      author: "Dr. Sarah Mitchell",
+      reviewedBy: "David Anderson, Oncologist",
       excerpt:
-        "What diet plan is considered the best for those with type 2 diabetes? In this article, we talk about foods to eat, foods to avoid, and the most beneficial diet plans for type 2 diabetes.",
+        "Cancer is a silent threat that affects people worldwide. This blog post is your guide to cancer prevention strategies, providing insights and tips to help reduce your risk of developing this disease.",
       tableOfContents: [
-        { label: 'This paragraph has a class "myclass"', path: "heading-two" },
+        {
+          id: "heading-intro",
+          heading: "Introduction to Cancer Prevention",
+        },
+        {
+          id: "heading-understanding-cancer",
+          heading: "Understanding Cancer and Its Risk Factors",
+        },
+        {
+          id: "heading-healthy-lifestyle",
+          heading: "Adopting a Healthy Lifestyle for Cancer Prevention",
+        },
+        {
+          id: "heading-screening-and-early-detection",
+          heading: "Importance of Screening and Early Detection",
+        },
+        {
+          id: "heading-genetic-risk",
+          heading: "Genetic Risk and Counseling",
+        },
+        {
+          id: "heading-resources-and-support",
+          heading: "Resources and Support for Cancer Prevention",
+        },
       ],
     },
   },

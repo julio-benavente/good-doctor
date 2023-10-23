@@ -11,7 +11,6 @@ const Typography = ({
   return (
     <MuiTypography
       variant={variant}
-      className={cn(className)}
       classes={{
         root: cn("font-cabinet font-cabinet"),
         h1: cn("text-4xl lg:text-5xl font-cabinet text-text-headline"),
@@ -25,6 +24,7 @@ const Typography = ({
         caption: cn("text-sm leading-snug"),
         ...classes,
       }}
+      className={cn(className)}
       {...props}
     >
       {props.children}

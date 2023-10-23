@@ -4,14 +4,18 @@ import Image from "next/image";
 const blogComponents = {
   h2: ({ children, ...props }) => {
     return (
-      <Typography variant="h2" className="mb-8 mt-12" {...props}>
+      <Typography
+        variant="h2"
+        className="mb-6 mt-12 [&:first-of-type]:mt-0"
+        {...props}
+      >
         {children}
       </Typography>
     );
   },
-  H2: ({ children, ...props }) => {
+  h3: ({ children, ...props }) => {
     return (
-      <Typography variant="h2" className="mb-8 mt-12" {...props}>
+      <Typography variant="h3" className="mt-6 text-lg" {...props}>
         {children}
       </Typography>
     );
@@ -26,13 +30,20 @@ const blogComponents = {
       </Typography>
     );
   },
+  ul: ({ children }) => {
+    return <ul className="pl-4 mt-4">{children}</ul>;
+  },
   li: ({ children }) => {
-    return <li className="list-disc text-lg">{children}</li>;
+    return (
+      <li className="list-disc text-lg [&::marker]:text-2xl [&::marker]:text-primary mb-2">
+        {children}
+      </li>
+    );
   },
   Planet: () => "Neptune",
   img: ({ ...props }) => {
     return (
-      <span className="relative w-full aspect-video block image">
+      <span className="relative w-full aspect-video block image my-12">
         <Image
           className="object-cover object-center w-full h-full rounded-lg"
           alt="doctor image"
