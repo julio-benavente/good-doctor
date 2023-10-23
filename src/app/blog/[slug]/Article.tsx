@@ -42,8 +42,11 @@ const Article = ({ metadata, MDXContent }) => {
               <div className="grid grid-cols-1 gap-2">
                 {metadata.tableOfContents.map(
                   ({ heading, id }: { heading: string; id: string }) => {
-                    //   console.log({ heading, id });
-                    return <Link href={`#${id}`}>{heading}</Link>;
+                    return (
+                      <Link href={`#${id}`} key={id}>
+                        {heading}
+                      </Link>
+                    );
                   }
                 )}
               </div>
