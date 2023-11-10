@@ -11,7 +11,7 @@ interface BlogSummaryProps {
 const BlogSummary = ({ className, data }: BlogSummaryProps) => {
   return (
     <div className={cn("col-span-3", className)}>
-      <div className="sticky top-4">
+      <div className="sticky top-24">
         <Typography className="font-bold">Blog Topics</Typography>
         <div className="grid mt-1 gap-y-2">
           {data.map((item, i) => {
