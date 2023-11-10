@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Button, Link, Typography } from "@/components";
-import CardImage from "@/../public/assets/hero-image.jpg";
+import CardImage from "@/../public/assets/agente-inmobiliario-o-asesor-financiero-que-muestra-terminos-contrato-pareja-feliz-bloc-notas.jpg";
 import cn from "@/helpers/cn";
 import { HtmlHTMLAttributes } from "react";
 

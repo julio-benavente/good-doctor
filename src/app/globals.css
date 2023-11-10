@@ -6,6 +6,10 @@
   @apply font-cabinet;
 }
 
+html {
+  /* @apply bg-secondary; */
+}
+
 /* react slick slider */
 .slick-track {
   display: flex !important;

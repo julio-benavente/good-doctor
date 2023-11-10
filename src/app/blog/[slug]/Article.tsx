@@ -1,8 +1,9 @@
 import blogComponents from "./blogComponents";
-import { Button, Link, Typography } from "@/components";
+import { BlogsSection, Button, Link, Typography } from "@/components";
 import cn from "@/helpers/cn";
+import SharePage from "./SharePage";
 
-const Article = ({ metadata, MDXContent }) => {
+const Article = ({ metadata, MDXContent, blogsData }) => {
   return (
     <article>
       <section className="pb-0 bg-primary">
@@ -14,14 +15,21 @@ const Article = ({ metadata, MDXContent }) => {
           )}
         >
           <div className="col-start-2">
-            <Typography variant="h1" className="text-white">
+            <Typography className="text-white/80">
+              {new Date(metadata.date).toLocaleDateString([], {
+                day: "2-digit",
+                month: "long",
+                year: "numeric",
+              })}
+            </Typography>
+            <Typography variant="h1" className="text-white mt-2">
               {metadata.title}
             </Typography>
             <Typography className="text-white mt-4">
               Written by {metadata.author}
             </Typography>
             {metadata.reviewdBy && (
-              <Typography className="text-white">
+              <Typography className="text-white/80">
                 Reviewd by {metadata.reviewdBy}
               </Typography>
             )}
@@ -37,7 +45,7 @@ const Article = ({ metadata, MDXContent }) => {
       >
         <div className={cn("grid xl:grid-cols-[14rem_1fr]", "lg:gap-x-16")}>
           <div>
-            <div className="lg:sticky lg:top-4">
+            <div className="lg:sticky lg:top-24">
               <Typography className="font-bold">In this article</Typography>
               <div className="grid grid-cols-1 gap-2">
                 {metadata.tableOfContents.map(
@@ -57,9 +65,9 @@ const Article = ({ metadata, MDXContent }) => {
             {MDXContent && <MDXContent components={{ ...blogComponents }} />}
           </div>
         </div>
-        <div>
-          <div className="lg:sticky lg:top-4">
-            <Typography variant="h3" className="[&]:text-xl">
+        <div className="relative">
+          <div className="lg:sticky lg:top-24">
+            <Typography className="[&]:text-xl font-bold">
               Become a patient
             </Typography>
             <Typography className="[&]:text-base">
@@ -68,15 +76,19 @@ const Article = ({ metadata, MDXContent }) => {
               caring for older adults.
             </Typography>
             <Button
-              className="mt-4"
+              className="mt-4 w-full"
               color="appointment"
               href="/request-an-appointment"
             >
               Request appointment
             </Button>
+
+            <SharePage />
           </div>
         </div>
       </section>
+
+      <BlogsSection data={blogsData} />
     </article>
   );
 };

@@ -32,7 +32,7 @@ declare module "@mui/material/styles" {
   interface PaletteOptions extends CustomPalette {}
 }
 
-const Button = (props: ButtonProps) => {
+const Button = ({ ...props }: ButtonProps) => {
   const CustomComponent = props.href ? Link : "span";
 
   return (

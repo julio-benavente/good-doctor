@@ -24,7 +24,7 @@ const DesktopNavbar = () => {
   });
 
   return (
-    <>
+    <div className="">
       <div
         className={cn(
           "hidden px-12 mx-auto lg:grid grid-cols-[auto_1fr_auto] h-16 items-center"
@@ -63,7 +63,7 @@ const DesktopNavbar = () => {
         </div>
       </div>
       {megaMenuData && <MegaMenu {...megaMenuData} />}
-    </>
+    </div>
   );
 };
 

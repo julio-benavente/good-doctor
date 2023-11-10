@@ -13,7 +13,7 @@ const page = async () => {
   const blogsData = await getBlogsData({ numberOfItems: 4 });
 
   return (
-    <div className="">
+    <div>
       <HeroSection />
       <SearchSection />
       <WhyUsSection />

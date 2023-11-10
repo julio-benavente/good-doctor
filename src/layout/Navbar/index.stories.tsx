@@ -13,4 +13,13 @@ export default meta;
 
 type Story = StoryObj<typeof Navbar>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  render: () => {
+    return (
+      <div>
+        <Navbar />
+        <div className="h-[200vh] bg-green-200"></div>
+      </div>
+    );
+  },
+};

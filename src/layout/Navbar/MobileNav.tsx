@@ -14,7 +14,7 @@ const MobileNavbar = () => {
   const handleNavbarItem = () => setNavbarIsOpen(false);
 
   return (
-    <>
+    <div className="">
       <div className="relative h-14 lg:hidden grid grid-flow-col justify-between items-center px-4 py-2">
         <Link href="/" passHref>
           <Logo className="h-6 text-green-800" />
@@ -47,7 +47,7 @@ const MobileNavbar = () => {
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 };
 export default MobileNavbar;

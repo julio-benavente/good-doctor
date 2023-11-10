@@ -2,7 +2,7 @@ import { Button } from "@/components";
 import cn from "@/helpers/cn";
 import Image from "next/image";
 import React from "react";
-import HeroImage from "@/../public/assets/doctor-listening copy.jpg";
+import HeroImage from "@/../public/assets/anciano-su-medico-dan-mano-mientras-saludan-pasillo-clinica-medica-foco-medico.jpg";
 import Typography from "@/components/Typography";
 
 const HeroSection = () => {
@@ -52,7 +52,7 @@ const HeroSection = () => {
               priority
               placeholder="blur"
               src={HeroImage}
-              className="w-full object-cover"
+              className="w-full object-cover object-top"
               alt="People laughing"
             />
           </div>

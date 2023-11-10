@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${cabinet.variable}`}>
         <Navbar />
-        {children}
+        <div className="">{children}</div>
         <RegularFooter />
       </body>
     </html>

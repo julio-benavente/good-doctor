@@ -11,7 +11,15 @@ export async function generateStaticParams() {
 
 const SingleBlogPage = async ({ params }: { params: { slug: string } }) => {
   const { MDXContent, metadata } = await getSingleBlogData(params.slug);
-  return <Article MDXContent={MDXContent} metadata={metadata} />;
+  const blogsData = await getBlogsData({ numberOfItems: 4 });
+
+  return (
+    <Article
+      MDXContent={MDXContent}
+      metadata={metadata}
+      blogsData={blogsData}
+    />
+  );
 };
 
 export default SingleBlogPage;
