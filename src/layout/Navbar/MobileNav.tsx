@@ -1,6 +1,6 @@
 "use client";
 
-import Logo from "@/../public/assets/hospitalLogo";
+import Logo from "@/../public/assets/thegooddoctorlogo";
 import Link from "next/link";
 import { navbarData } from "./navbarData";
 import { useState } from "react";
@@ -17,7 +17,7 @@ const MobileNavbar = () => {
     <div className="">
       <div className="relative h-14 lg:hidden grid grid-flow-col justify-between items-center px-4 py-2">
         <Link href="/" passHref>
-          <Logo className="h-6 text-green-800" />
+          <Logo className="h-6 text-green-800 w-fit" />
         </Link>
 
         <div

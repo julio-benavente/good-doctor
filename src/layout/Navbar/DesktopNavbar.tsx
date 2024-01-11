@@ -1,7 +1,7 @@
 "use client";
 
 import cn from "@/helpers/cn";
-import Logo from "@/../public/assets/hospitalLogo";
+import Logo from "@/../public/assets/thegooddoctorlogo";
 import Link from "next/link";
 import { navbarData } from "./navbarData";
 import { MegaNavbarLink, RegularNavbarLink, MegaMenu } from "./NavbarItems";
